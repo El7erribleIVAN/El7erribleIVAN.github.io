@@ -4,6 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        main {
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,11 +85,17 @@
     <main class="container">
         <h2>Bienvenido a mi página</h2>
         <p>Este es un párrafo de ejemplo para mostrar cómo se ve el contenido en esta página web. Aquí puedes agregar más información sobre ti o sobre tu sitio.</p>
-        <button>Haz clic aquí</button>
+        <button onclick="showAlert()">Haz clic aquí</button>
     </main>
 
     <footer>
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function showAlert() {
+            alert('¡Hola! Has hecho clic en el botón.');
+        }
+    </script>
 </body>
 </html>
