@@ -1,101 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        main {
-            padding: 20px;
-            background: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        button {
-            background-color: #007BFF;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Farmeo Mejorado</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Mi Página Web</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre Mí</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <h1>Juego de Farmeo - Elementos</h1>
 
-    <main class="container">
-        <h2>Bienvenido a mi página</h2>
-        <p>Este es un párrafo de ejemplo para mostrar cómo se ve el contenido en esta página web. Aquí puedes agregar más información sobre ti o sobre tu sitio.</p>
-        <button onclick="showAlert()">QUE ONDA PERRROOOO</button>
-    </main>
+  <div id="resources">
+    <p>Air: <span id="air-count">0</span>   <span id="air-per-second">0</span>p/s</p>
+    <p>Fire: <span id="fire-count">0</span>   <span id="fire-per-second">0</span>p/s</p>
+    <p>Water: <span id="water-count">0</span>   <span id="water-per-second">0</span>p/s</p>
+    <p>Earth: <span id="earth-count">0</span>   <span id="earth-per-second">0</span>p/s</p>
+    <p>Lava: <span id="lava-count">0</span>   <span id="lava-per-second">0</span>p/s</p>
+  </div>
+  
+  <div id="actions">
+    <!-- Recolectar recursos -->
+    <button id="collect-air-button">Recolectar Air</button>
+    <button id="collect-fire-button">Recolectar Fire</button>
+    <button id="collect-water-button">Recolectar Water</button>
+    <button id="collect-earth-button">Recolectar Earth</button>
+    <button id="collect-lava-button">Recolectar Lava</button>
 
-    <footer>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados. SLUDOOOS PETES!!!</p>
-    </footer>
+    <!-- Comprar máquinas -->
+    <p>Máquinas de Air: <span id="machine-air-count">0</span> (Máximo: 5)</p>
+    <button id="buy-machine-air-button">Comprar Máquina Air (Coste: <span id="buy-machine-air-cost">10</span> Air)</button>
 
-    <script>
-        function showAlert() {
-            alert('¡Hola! Has hecho clic en el botón.');
-        }
-    </script>
+    <p>Máquinas de Fire: <span id="machine-fire-count">0</span> (Máximo: 3)</p>
+    <button id="buy-machine-fire-button">Comprar Máquina Fire (Coste: <span id="buy-machine-fire-cost">20</span> Fire)</button>
+
+    <p>Máquinas de Water: <span id="machine-water-count">0</span> (Máximo: 4)</p>
+    <button id="buy-machine-water-button">Comprar Máquina Water (Coste: <span id="buy-machine-water-cost">15</span> Water)</button>
+
+    <p>Máquinas de Earth: <span id="machine-earth-count">0</span> (Máximo: 6)</p>
+    <button id="buy-machine-earth-button">Comprar Máquina Earth (Coste: <span id="buy-machine-earth-cost">25</span> Earth)</button>
+
+    <p>Máquinas de Lava: <span id="machine-lava-count">0</span> (Máximo: 2)</p>
+    <button id="buy-machine-lava-button">Comprar Máquina Lava (Coste: <span id="buy-machine-lava-cost">30</span> Lava)</button>
+  </div>
+
+  <div id="animations"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>

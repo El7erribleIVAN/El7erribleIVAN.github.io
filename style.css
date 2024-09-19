@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+  }
+  
+  h1 {
+    color: #ff6347;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  #resources {
+    margin: 20px;
+    font-size: 18px;
+  }
+  
+  #actions {
+    margin: 20px;
+  }
+  
+  #animations {
+    position: relative;
+    height: 100px;
+    margin-top: 20px;
+  }
+  
+  /* Animación de recolección */
+  .resource-animation {
+    position: absolute;
+    animation: moveUp 1s ease-in-out;
+  }
+  
+  @keyframes moveUp {
+    from { bottom: 0; opacity: 1; }
+    to { bottom: 100px; opacity: 0; }
+  }
+  
