@@ -37,6 +37,19 @@ button {
   transition: background-color 0.3s ease;
 }
 
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.boton:hover {
+  background-color: #0056b3;
+}
+
 button:hover {
   background-color: #45a049;
 }
