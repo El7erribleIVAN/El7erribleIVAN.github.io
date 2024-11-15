@@ -43,3 +43,36 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* Estilos generales para los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: #ffffff; /* Color de texto */
+    background-color: #007bff; /* Fondo de color azul */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Fuente en negrita */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    display: inline-block; /* Asegura que el enlace se comporte como un bloque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Efecto hover */
+a:hover {
+    background-color: #0056b3; /* Cambio a un azul más oscuro al pasar el cursor */
+    transform: translateY(-3px); /* Sube el botón ligeramente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+}
+
+/* Efecto focus (cuando el botón es seleccionado) */
+a:focus {
+    outline: none; /* Elimina el borde predeterminado del navegador */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Borde azul claro */
+}
+
+/* Efecto active (cuando el botón es presionado) */
+a:active {
+    background-color: #004085; /* Cambia el color de fondo cuando se hace clic */
+    transform: translateY(1px); /* Efecto de "presionar" el botón */
+}
