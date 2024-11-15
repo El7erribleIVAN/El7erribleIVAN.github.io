@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Farmeo Mejorado</title>
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Juego de Farmeo - Elementos</h1>
+  <a href="/html/receta.html" class="boton">Ir a receta</a>
+  <a href="/html/landingpage.html" class="boton">Ir a landingpage</a>
+  
+  <!-- Mostrar los recursos -->
+  <div id="resources">
+    <div id="air">
+      <img src="assets/images/air.png" alt="Air Icon" class="resource-icon">
+      <span id="air-count">0</span>
+      <button id="collect-air-button">Recolectar Air</button>
+    </div>
+    <div id="fire">
+      <img src="assets/images/fire.png" alt="Fire Icon" class="resource-icon">
+      <span id="fire-count">0</span>
+      <button id="collect-fire-button">Recolectar Fire</button>
+    </div>
+    <div id="water">
+      <img src="assets/images/water.png" alt="Water Icon" class="resource-icon">
+      <span id="water-count">0</span>
+      <button id="collect-water-button">Recolectar Water</button>
+    </div>
+    <div id="earth">
+      <img src="assets/images/earth.png" alt="Earth Icon" class="resource-icon">
+      <span id="earth-count">0</span>
+      <button id="collect-earth-button">Recolectar Earth</button>
+    </div>
+    <div id="lava">
+      <img src="assets/images/lava.png" alt="Lava Icon" class="resource-icon">
+      <span id="lava-count">0</span>
+      <button id="collect-lava-button">Recolectar Lava</button>
+    </div>
+  </div>    
+
+  <!-- Sección de compra de máquinas -->
+  <div id="machines">
+    <div class="machine">
+      <p>Máquinas de Air: <span id="machine-air-count">0</span> (Máximo: 5)</p>
+      <button id="buy-machine-air-button">Comprar Máquina Air (Coste: <span id="buy-machine-air-cost">10</span> Air)</button>
+    </div>
+    
+    <div class="machine">
+      <p>Máquinas de Fire: <span id="machine-fire-count">0</span> (Máximo: 3)</p>
+      <button id="buy-machine-fire-button">Comprar Máquina Fire (Coste: <span id="buy-machine-fire-cost">20</span> Fire)</button>
+    </div>
+    
+    <div class="machine">
+      <p>Máquinas de Water: <span id="machine-water-count">0</span> (Máximo: 4)</p>
+      <button id="buy-machine-water-button">Comprar Máquina Water (Coste: <span id="buy-machine-water-cost">15</span> Water)</button>
+    </div>
+    
+    <div class="machine">
+      <p>Máquinas de Earth: <span id="machine-earth-count">0</span> (Máximo: 6)</p>
+      <button id="buy-machine-earth-button">Comprar Máquina Earth (Coste: <span id="buy-machine-earth-cost">25</span> Earth)</button>
+    </div>
+    
+    <div class="machine">
+      <p>Máquinas de Lava: <span id="machine-lava-count">0</span> (Máximo: 2)</p>
+      <button id="buy-machine-lava-button">Comprar Máquina Lava (Coste: <span id="buy-machine-lava-cost">30</span> Lava)</button>
+    </div>
+  </div>
+
+  <!-- Canvas para animaciones y gráficos avanzados -->
+  <div id="animations">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+</body>
+</html>
