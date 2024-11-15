@@ -13,4 +13,4 @@ Un juego de farmeo simple en el que recolectas recursos y compras máquinas para
 - HTML, CSS, JavaScript
 
 ## Captura de pantalla
-![Captura de pantalla](imagen.jpg)
+![Captura de pantalla](/assets/images/imagen.jpg)
