@@ -9,10 +9,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Canvas para animaciones y gráficos avanzados -->
+  <div id="animations">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+  </div>
+
   <h1>Juego - Elementos</h1>
-  <a href="receta.html" class="boton">Ir a receta</a>
   <a href="landingpage.html" class="boton">Ir a landingpage</a>
-  <a href="/hyperspace/index.html" class="boton">Ir a hyperspace</a>
+  <button id="limpiar-local">Reiniciar recursos</button>
   
   <!-- Mostrar los recursos -->
   <div id="resources">
@@ -70,12 +74,6 @@
       <button id="buy-machine-lava-button">Comprar Máquina Lava (Coste: <span id="buy-machine-lava-cost">30</span> Lava)</button>
     </div>
   </div>
-
-  <!-- Canvas para animaciones y gráficos avanzados -->
-  <div id="animations">
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
-  </div>
-
   <!-- Scripts -->
   <script src="js/script.js"></script>
 </body>

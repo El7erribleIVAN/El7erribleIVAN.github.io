@@ -86,8 +86,8 @@ button:hover {
   position: relative;
   height: 100px;
   margin-top: 20px;
-  background-color: #fafafa;
-  border: 1px solid #ccc;
+  background-color: #fafafa00;
+  border: 1px solid #ff0000;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -96,9 +96,8 @@ button:hover {
 /* Estilo para la animación de recolección */
 .resource-animation {
   position: absolute;
-  color: #ff6347;
+  color: #000000;
   font-size: 18px;
-  font-weight: bold;
   animation: moveUp 1s ease-in-out;
 }
 

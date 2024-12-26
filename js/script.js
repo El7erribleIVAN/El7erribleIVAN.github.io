@@ -160,3 +160,15 @@ function createResourceAnimation(text) {
       animation.remove();
   }, 1000);
 }
+
+function limpiarStorage(){
+  localStorage.clear();
+  createResourceAnimation("Eliminacion de recursos");
+
+  setTimeout(() => {
+    createResourceAnimation("Reiniciando...");
+    location.reload();
+  }, 1000);
+}
+
+document.getElementById('limpiar-local').addEventListener('click', () => limpiarStorage());

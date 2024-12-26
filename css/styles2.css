@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #ad30cc;
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -30,11 +30,12 @@ input[type="text"], input[type="email"] {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #d8260f;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 footer {
@@ -44,7 +45,6 @@ footer {
     color: white;
 }
 
-/* Estilos generales para los enlaces */
 a {
     text-decoration: none; /* Elimina el subrayado por defecto */
     color: #ffffff; /* Color de texto */
