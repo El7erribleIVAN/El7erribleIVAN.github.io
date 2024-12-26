@@ -104,6 +104,7 @@ document.getElementById('collect-fire-button').addEventListener('click', () => c
 document.getElementById('collect-water-button').addEventListener('click', () => collectResource('water'));
 document.getElementById('collect-earth-button').addEventListener('click', () => collectResource('earth'));
 document.getElementById('collect-lava-button').addEventListener('click', () => collectResource('lava'));
+document.getElementById('limpiar-local').addEventListener('click', () => limpiarStorage());
 
 // Comprar máquinas
 function buyMachine(type) {
@@ -170,5 +171,3 @@ function limpiarStorage(){
     location.reload();
   }, 1000);
 }
-
-document.getElementById('limpiar-local').addEventListener('click', () => limpiarStorage());
