@@ -15,14 +15,26 @@ let machines = {
   lava: { count: 0, cost: 30, max: 5, perSecond: 0.5 }
 };
 
-// Cargar sonidos
-const collectSound = new Audio('assets/sounds/collect-sound.mp3');
-const machineSound = new Audio('assets/sounds/machine-sound.mp3');
+// Precargar sonidos
+const sounds = {
+  collect: new Audio('/assets/sounds/collect-sound.mp3'),
+  machine: new Audio('/assets/sounds/machine-sound.mp3')
+};
+
+// Función para reproducir sonido precargado
+function playSound(sound) {
+  if (sound.readyState >= 2) { // Verifica que el audio esté cargado
+      const clonedSound = sound.cloneNode(); // Permite overlap
+      clonedSound.play();
+  } else {
+      console.warn('El sonido no está cargado:', sound.src);
+  }
+}
+
 
 let lastCollectSoundTime = 0;
 let lastMachineSoundTime = 0;
 let lastAnimationTime = 0;
-const soundDelay = 500; // 500ms de espera entre sonidos
 const animationDelay = 500; // 500ms de espera entre animaciones
 
 // Función para guardar el progreso
@@ -76,7 +88,7 @@ function updateMachineCost() {
 }
 
 function updateResourcePerSecond(type) {
-  document.getElementById(`${type}-per-second`).textContent = machines[type].perSecond;
+  document.getElementById(`${type}-per-second`).textContent = (machines[type].perSecond+' /s');
 }
 
 // Recolectar recursos con animación y control de sonido
@@ -85,11 +97,8 @@ function collectResource(type) {
   resources[type] += 0.8;
   updateResourceCount();
 
-  // Control de sonido para evitar demasiadas reproducciones rápidas
-  if (currentTime - lastCollectSoundTime >= soundDelay) {
-      collectSound.play();
-      lastCollectSoundTime = currentTime;
-  }
+
+  playSound(sounds.collect);
 
   // Crear animación con limitación de frecuencia
   if (currentTime - lastAnimationTime >= animationDelay) {
@@ -123,11 +132,7 @@ function buyMachine(type) {
       updateMachineCost();
       updateResourcePerSecond(type);
 
-      // Reproducir sonido con delay entre compras de máquinas
-      if (currentTime - lastMachineSoundTime >= soundDelay) {
-          machineSound.play();
-          lastMachineSoundTime = currentTime;
-      }
+      playSound(sounds.machine);
 
       saveProgress();
   }
